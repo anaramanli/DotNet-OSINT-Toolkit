@@ -1,0 +1,114 @@
+[
+  {
+    "ContainingType": "BotApi.Controllers.AdvancedOSINTController",
+    "Method": "GetBitcoinDetails",
+    "RelativePath": "api/osint/bitcoin/{address}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "address",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BotApi.Controllers.AdvancedOSINTController",
+    "Method": "GetDomainDetails",
+    "RelativePath": "api/osint/domain-details/{domain}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "domain",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BotApi.Controllers.AdvancedOSINTController",
+    "Method": "GetEmailDetails",
+    "RelativePath": "api/osint/email-details/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BotApi.Controllers.AdvancedOSINTController",
+    "Method": "InvestigateUsername",
+    "RelativePath": "api/osint/investigate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BotApi.Controllers.InvestigationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BotApi.Controllers.AdvancedOSINTController",
+    "Method": "GetIPDetails",
+    "RelativePath": "api/osint/ip-details/{ipAddress}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ipAddress",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BotApi.Controllers.AdvancedOSINTController",
+    "Method": "GetPhoneDetails",
+    "RelativePath": "api/osint/phone/{phoneNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BotApi.Controllers.AdvancedOSINTController",
+    "Method": "GetUsernameDetails",
+    "RelativePath": "api/osint/username/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

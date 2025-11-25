@@ -1,0 +1,218 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "BotApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/osint/investigate": {
+      "post": {
+        "tags": [
+          "AdvancedOSINT"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvestigationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvestigationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvestigationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/osint/username/{username}": {
+      "get": {
+        "tags": [
+          "AdvancedOSINT"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/osint/email-details/{email}": {
+      "get": {
+        "tags": [
+          "AdvancedOSINT"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/osint/ip-details/{ipAddress}": {
+      "get": {
+        "tags": [
+          "AdvancedOSINT"
+        ],
+        "parameters": [
+          {
+            "name": "ipAddress",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/osint/domain-details/{domain}": {
+      "get": {
+        "tags": [
+          "AdvancedOSINT"
+        ],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/osint/phone/{phoneNumber}": {
+      "get": {
+        "tags": [
+          "AdvancedOSINT"
+        ],
+        "parameters": [
+          {
+            "name": "phoneNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/osint/bitcoin/{address}": {
+      "get": {
+        "tags": [
+          "AdvancedOSINT"
+        ],
+        "parameters": [
+          {
+            "name": "address",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "InvestigationRequest": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "nullable": true
+          },
+          "search_social_media": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "search_emails": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "search_ip": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "search_domains": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "search_phone": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "search_crypto": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "search_forums": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "search_names": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
